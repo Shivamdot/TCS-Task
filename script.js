@@ -35,7 +35,7 @@ function addPost(post) {
 
 // GET Posts from the api
 function getPosts() {
-    $('.load').addClass('show');
+    $('.loader').addClass('show');
 
     $.ajax({
         url: URL,
@@ -56,7 +56,7 @@ function getPosts() {
 
 // Sorting posts
 function sortPosts() {
-    $('.load').addClass('show');
+    $('.loader').addClass('show');
 
     if(sortType == 0) { // by likes
         if(order == 0) {
