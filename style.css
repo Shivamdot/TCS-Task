@@ -1,0 +1,290 @@
+/* 
+    Developed by: Shivam Sharma
+    Agenda: Hiring Task for TCS as FullStack Developer
+    Project: Instagram Clone  
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    width: 100%;
+    font-family: 'Fira Sans', sans-serif;
+    height: 100vh;
+    background-color: #fafafa;
+    padding: 50px 0;
+}
+
+/*=====================================================================================================*/
+
+.nav {
+    width: 100%;
+    height: 50px;
+    padding: 10px 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.nav .logo {
+    height: 100%;
+    display: inline-block;
+}  
+
+.nav .logo .img-blk img {
+    height: 100%;
+}
+
+.nav .sort {
+    display: inline-block;
+    height: 100%;
+    float: right;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav .sort p {
+    color: #000;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.nav .sort .box {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 150px;
+    background-color: #fff;
+    border: 1px solid #c8c8c8;
+    display: none;
+}
+
+.nav .sort .box .blk {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #c8c8c8;
+    font-size: 0;
+}
+
+.nav .sort .box .blk .left,
+.nav .sort .box .blk .right{
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+
+.nav .sort .box .blk .left {
+    border-right: 1px solid #c8c8c8;
+}
+
+.nav .sort .box .blk .left p,
+.nav .sort .box .blk .right p {
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(114, 114, 114);
+    transition: .2s;
+}
+
+.nav .sort .box .option .left p,
+.nav .sort .box .option .right p {
+    font-size: 14px;
+}
+
+.nav .sort .box .blk .left:hover p,
+.nav .sort .box .blk .right:hover p  {
+    color: rgb(29, 29, 29);
+}
+
+.nav .sort .box .blk .select {
+    background-color: #fafafa;
+}
+
+.nav .sort .box .blk .select p {
+    color: rgb(29, 29, 29);
+}
+
+.nav .sort .box .submit {
+    border-bottom: none;
+}
+
+.nav .sort .box .submit p {
+    line-height: 40px;
+    text-align: center;
+    color: rgb(29, 29, 29);   
+    font-weight: bold;
+}
+
+.nav .sort .box .submit:hover {
+    background-color: #fafafa;
+}
+
+.nav .sort:hover .box {
+    display: block;
+}
+
+.nav .home {
+    color: #000;
+    font-size: 22px;
+    line-height: 30px;
+    display: inline-block;
+    float: right;
+    margin: 0 20px;
+}
+
+/*=====================================================================================================*/
+
+.posts {
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.posts .post {
+    width: 100%;
+    max-width: 550px;
+    margin: 50px auto;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.posts .post .user {
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    background-color: #fff;
+}
+
+.posts .post .user .data {
+    display: inline-block;
+    height: 100%;
+    width: 80%;
+    max-width: 300px;
+}
+
+.posts .post .user .data .img-blk {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgb(42, 42, 42);
+    overflow: hidden;
+}
+
+.posts .post .user .data .img-blk img {
+    height: 100%;
+}
+
+.posts .post .user .data .name {
+    display: inline-block;
+    margin: 10px 5px;
+    overflow: hidden;
+}
+
+.posts .post .user .data .name p {
+    line-height: 30px;
+    font-size: 16px;
+    color: rgb(42, 42, 42);
+}
+
+.posts .post .user .options {
+    display: inline-block;
+    float: right;
+    height: 100%;
+    width: 20%;
+    max-width: 50px;
+}
+
+.posts .post .user .options p {
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(42, 42, 42);
+    font-weight: lighter;
+}
+
+.posts .post .img-blk {
+    width: 100%;
+}
+
+.posts .post .img-blk img {
+    width: 100%;
+}
+
+.posts .post .likes,
+.posts .post .time {
+    width: 100%;
+    height: 30px;
+    padding: 5px 15px;
+    background-color: #fff;
+}
+
+.posts .post .likes p,
+.posts .post .time p {
+    color: rgb(68, 68, 68);
+    font-size: 16px;
+    line-height: 20px;
+}
+
+/*=====================================================================================================*/
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .6);
+    display: none;
+}
+
+.loader.show {
+    display: block;
+}
+
+.loader .blck {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    height: 100px;
+    width: 100px;
+    animation: rotate 1s infinite linear;
+}
+
+.loader .blck img {
+    width: 100%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(-10deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}
+
+@media(max-width:600px) {
+    .nav {
+        padding: 10px;
+    }
+    .posts .post .likes p,
+    .posts .post .time p {
+        font-size: 14px;
+    }
+}
